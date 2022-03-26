@@ -1,0 +1,141 @@
+body{
+    background-image: url("/static/img/back.jpg");
+    width: 100%;
+    background-attachment: fixed;
+    position: absolute;
+}
+
+
+
+.container_form-login{ 
+    max-width: 880px;
+    width: 40%;
+    margin: auto;
+    margin-top: 50px;
+    padding:25px;
+    background-color: rgb(5, 5, 5, 0.7);
+    border-radius: 15px;
+    margin-top: 150px;
+    
+}
+
+.form-login{
+    
+    display: grid;
+    grid-template-columns: 1fr ;
+    gap: 15px;
+    
+    
+    
+}
+
+
+.form_login-label{
+    display: block;
+    font-weight: 700;
+    padding: 10px;
+    cursor: pointer;
+    color: rgb(253, 110, 15);
+}
+
+.form_grup_login-input{
+    position: relative;
+}
+
+
+.form_grup-login input{
+    width: 100%;
+    background-color: #fff;
+    border: 3px solid  transparent;
+    border-radius: 5px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 40px 0 10px;
+    transition: .3s ease all;
+
+}
+
+
+.form_grup-login input:focus{
+    border: 3px solid #F96908 ;
+    outline: none;
+    box-shadow: 3px 0px 30px #dd5e09;
+}
+.form_login-btn{
+  margin: auto;
+
+}
+
+
+.form_login-btn button{
+    height: 45px;
+    line-height: 45px;
+    width: 180px;
+    font-size: 20px;
+    background: rgb(252, 95, 5);
+    color: #fff ;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition:  .1s ease all;
+    }
+
+.form_login-btn button:hover{
+    box-shadow: 3px 0px 30px rgb(103, 95, 87,1);
+
+}
+
+
+.form_grup-input input:focus{
+    border: 3px solid #F96908 ;
+    outline: none;
+    box-shadow: 3px 0px 30px #dd5e09;
+}
+
+
+/*-------------------------ERROR-------------------------------------------*/
+
+.message_error{
+    color: red;
+    font-size: 15px;
+    text-align: center;
+    display: none;
+    
+
+}
+
+.active p {
+
+   display: block;
+
+}
+
+
+.headerLogin{
+display: flex;
+grid-column: 1fr 1fr;
+color: #fff;
+
+margin-left: 20%;
+}
+
+.notification{
+    color: rgb(255, 94, 0);
+}
+
+.fa-user{
+    color: #F96908 ;
+}
+
+
+
+.grup_icon-password{
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+    z-index: 100;
+    font-size: 20px;
+    
+    
+}

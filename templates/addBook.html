@@ -1,0 +1,122 @@
+{% extends 'layout.html' %}
+
+{%block body%}
+
+
+<div class="container_form">
+
+
+    <form action="/save_book" , method='POST' enctype="multipart/form-data" class="form">
+
+
+        <div class="form_grup">
+            <label class="form_label"> Imagen Libro </label>
+
+           
+           
+                 <div class="add_Img_Book">
+                    
+
+                    <img id="imgnewBook" class="notVisible" src="" alt="">
+                     
+                    <label class="" for="file">
+                        <i class="fas fa-plus "></i>
+                        Foto Libro
+                         </label>
+                
+                <input id="file" type="file" name="imagen" multiple>
+
+                
+                </div>
+               
+
+           
+           
+            <p class="form_input-error">Debe ingresar un titulo</p>
+        </div>
+
+
+
+        <div class=form_grup>
+            <label class="form_label"> Titulo </label>
+            <div class="form_grup-input">
+                <input type="text" name="title">
+                <i class=" form_grup-icon fas fa-times-circle"></i>
+            </div>
+            <p class="form_input-error">Debe ingresar un titulo</p>
+        </div>
+
+
+        <div class="form_grup">
+            <label class="form_label"> Autor </label>
+            <div class="form_grup-input">
+                <select class="" name="author">
+                    <option selected value="0"> Autor </option>
+                    <optgroup class="autores" label="Autores">
+                    </optgroup>
+
+                    <optgroup label="Nuevo Autor">
+                        <option value="3">Agregar</option>
+
+                    </optgroup>
+                </select>
+            </div>
+        </div>
+
+
+
+        <div class="form_grup">
+            <label for="phone" class="form_label">Categorias</label>
+            <div class="form_grup-input">
+                <select class="" aria-label="Default select example" name="category">
+                    <option selected value="0"> Categorias </option>
+                    <optgroup class="category">
+                    </optgroup>
+                </select>
+            </div>
+
+        </div>
+
+
+        <div class="form_grup">
+            <label for="phone" class="form_label">Estado de Consercacion</label>
+            <div class="form_grup-input">
+                <select class="" name="conservation">
+                    <option> Estado de Consercación </option>
+                    <optgroup class="conservation">
+                    </optgroup>
+                </select>
+            </div>
+        </div>
+
+       
+
+
+        <div class="form_grup"> 
+            <label class="form_label"> N°  Isbn</label>
+            <div class="form_grup-input">
+                <input type="number" name="isbn">
+            </div>
+            <p class="form_input-error">Debe ingresar el N° de ISBN</p>
+
+        </div>
+
+       
+        <div class="form_btn">
+
+            <button type="submit">Agregar Libro</button>
+
+            <p class="form__message-susses" id="formMessgeSusses">
+                Libro agregado exitosamente!</p>
+
+        </div>
+    </form>
+
+
+
+</div>
+
+
+
+<script src="static/js/scriptsAddBook.js"></script>
+{%endblock%}

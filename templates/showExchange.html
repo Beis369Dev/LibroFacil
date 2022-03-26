@@ -1,0 +1,82 @@
+{% extends 'layout.html' %}
+
+{%block body%}
+
+
+<div class="contExchangeView"> 
+
+    <!-- --------------------------- mi libro ------------------- -->
+
+    
+<div class="BontBook1"data-idbook1="{{data['bookId1'][0]}}" data-useridbook1="{{data['bookId1'][10]}}">
+    <h2>Mi Libro <i class="fas fa-book"></i></h2>
+    <h3>{{data['bookId1'][1]}}</h3>
+
+    
+
+        <img class="imgExchangeView" src="http://127.0.0.1:8000/static/{{data['bookId1'][9]}}" />
+
+   
+    <ul>
+        <li>Categoria
+            <ul>{{data['bookId1'][3]}}</ul>
+        </li>
+        <li>Autor
+            <ul>{{data['bookId1'][5]}}</ul>
+        </li>
+
+        <li>Estado Conservacion
+            <ul>{{data['bookId1'][8]}}</ul>
+        </li>
+    </ul>
+</div>
+ <!-- -----------------------------botones ----------------------- -->
+<div class="BontBook1" >
+
+    
+    <button class="btn" id="Btn_accept_Exchange"  value="{{data['ExchangeId']}}">INTERCAMBIAR</button>
+
+    <button class="btn" id="Btn_negative_Exchange" value="{{data['ExchangeId']}}">RECHAZAR</button>
+
+    <div class="Cont_messages">
+        <p class="Message_1">Intercambio Aceptado  <i class="far fa-handshake fa-2x"></i></p>
+        <p class="Message_2">Intercambio Rechazado <i class="fas fa-handshake-slash fa-2x"></i></p>
+    </div>
+
+    <a href="/chat">
+    <button class="btn_chat" >Enviar Mensaje <i class="fas fa-comments fa-2x"></i></button> </a>
+
+</div>
+
+           <!-- ------------------------------Libro 2 ------------------------      -->
+
+<div class="BontBook2" data-idbook2="{{data['bookId2'][0]}}" data-useridbook2="{{data['bookId2'][10]}}">
+    <h2>{{data['bookId2'][11]}} te ofrece:</h2>
+    <h3>{{data['bookId2'][1]}}</h3>
+    
+
+        <img class="imgExchangeView" src="http://127.0.0.1:8000/static/{{data['bookId2'][9]}}" >
+
+   
+    <ul>
+        <li>Categoria
+            <ul>{{data['bookId2'][3]}}</ul>
+        </li>
+        <li>Autor
+            <ul>{{data['bookId2'][5]}}</ul>
+        </li>
+        <li>Estado Conservacion
+            <ul>{{data['bookId2'][8]}}</ul>
+        </li>
+    </ul>
+</div>
+
+
+    
+</div>
+
+
+
+<script src="http://127.0.0.1:8000/static/js/showExchange.js"></script>
+
+{%endblock%}

@@ -1,0 +1,51 @@
+
+New Book input 
+
+{"title": "Un best seller", "author": 1,
+    "ISBN": 123456523,
+    "category": 1,
+     "status": 2,
+      "img":"libro.png",
+      "user":1
+      
+}
+
+Transacion information 
+
+{   "titleId":1,
+    "title": "Un best seller", 
+    "authorId": 1, "author":"name ",
+    "ISBN": 123456523,
+    "categoryId": 1,
+    "category":"name",
+     "statusId": 2,
+     "status":"name",
+      "img":"libro.png",
+      "userId":1,
+      "user":"name"
+      
+}
+
+
+
+New User 
+ {"name" : "Victor",
+"lastName" : "Beis",
+"email" : "victorjbeis96@gmail.com",
+"password" : "Victor1996!",
+"img" : "foto.jpng",
+"rol": "user"
+ }
+
+ New Cat
+ {"category":"Novelas"}
+
+ new author
+ {"name":"Alfredo","lastName":"Peña"}
+
+ new State
+ {"status":"Nuevo"}
+
+
+
+

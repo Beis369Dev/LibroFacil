@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+
+{%block body%}
+<link rel="stylesheet" href="{{url_for('static',filename='css/home.css')}}">
+
+
+<div class="container">
+
+    {%if data != [] %}
+    {% for d in data%}
+    <div class="card">
+        <img src="static/{{d['img']}}"class="imgBook" alt="">
+        <div class="contTilte"><a class="btn" href="/show_book_exchange/{{d['BookId']}}">intercambiar</a></div>
+    </div>
+    {%endfor%}
+    {%else%}
+        <div class="message">
+            <h1>No se encontraron regiostros  <i class="fas fa-exclamation-circle"></i></h1>
+        </div>
+    {%endif%}
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+{%endblock%}

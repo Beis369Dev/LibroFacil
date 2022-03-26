@@ -1,0 +1,100 @@
+{% extends 'layout.html' %}
+
+{%block body%}
+
+
+<div class="container_pag">
+
+
+    <!-- .........................Contenedor Datos Usuario ------------------------------------>
+    <div class="DataUser">
+
+        <div  class="conteinerDataUser">
+            <a href="http://127.0.0.1:8000/FormUpdataUser" target="_parent">
+                <button title="Editar Perfil"  class="btn btn_userPanel"> 
+                    <i class="fas fa-user-edit fa-2x"></i></button></a>
+
+            <div class="conteiner_img_user">
+                <img src="" alt="" class="imgUser">
+                <div class="icon_img">
+                    <i class="fas fa-camera fa-2x " id="Add_newPhoto"></i>
+                    
+                </div>
+            </div>
+
+            <h2 class="h2"> </h2>
+
+        </div>  
+        
+        <div class="UpData">
+            <i class="fas fa-times fa-2x close"></i>
+
+            <div id="contenedor">
+                
+            </div>
+            <form action="" enctype="multipart/form-data" method="post" id="formPhoto">
+                <input style="display: none;" type="file" id="New_photoUser" name="photo" >
+
+            <button type="submit" class="btn" id="UpLoad" > Subir  <i class="fas fa-upload fa-2x"></i></button>
+            
+            </form>
+
+        </div>
+
+       
+    </div>
+
+
+<!--...........................................Bibloteca.......................-->
+
+    <div class="library">
+
+      <div class="messages" >
+        <h4 class="messageDeleteTrue">Libro Borrado <i class="fas fa-check"></i></h4>
+        <h4 class="messageDeleteFalse">El Libro se encuentra en un intercambio <i class="fas fa-exclamation-triangle"></i></h4>
+        <h4 class="messageBookNotFound">No tienes Libros cargados aún  </h4>
+        
+        </div>
+
+        <div class="titleDiv"> 
+        <h4>Mi Blibloteca</h4>
+        <a href="http://127.0.0.1:8000/addNewBook">
+        <button class="btn">Agregar Libro</button>
+             </a>
+            </div>
+    </div>
+
+ <!--.....................Intercambio..........................-->
+
+    <div class="ConteinerExchanges">
+        <div class="titleDiv">
+            <div class="solicitudes">
+                <h4 class="titleRequestEx">Solicitudes</h4>
+            </div>
+            <div class="peticiones">
+                <h4 class="titleMyRequest">Peticiones</h4>
+            </div>
+        </div>
+
+        <div class="exchanges">
+
+        </div>
+
+        <div  class="Request_Exchanges">
+                
+
+        </div>
+
+    </div> 
+
+</div>
+
+
+<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script src="http://127.0.0.1:8000/static/js/user_dashboard.js"></script>
+<script src="http://127.0.0.1:8000/static/js/UpData_PhotoUser.js"></script>
+
+
+{%endblock%}

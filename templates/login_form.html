@@ -1,0 +1,59 @@
+{% extends 'layout.html' %}
+
+{%block body%}
+
+
+
+
+<div class="container_form-login"> form_login
+    <div class="headerLogin">
+    <img src="static\img\Libro_Facil_icon.png" alt=""width="90" height="100">
+    <h1>Libro Fácil</h1>
+    
+</div>
+<p style="color: #fff; text-align: center;">¿No tienes una cuenta? <a style="color: #F96908;"  href="http://127.0.0.1:8000/createUser">Registrarse</a> </p>
+    <form action='/send_login' method="POST" class="form-login" id="form_login">
+
+        <div class="form_grup-login" id="grup_email">
+
+            <div class="form_grup_login-input">
+                <label for="email" class="form_login-label">Email </label>
+                <input type="email" value=""  name="email" id="email" placeholder="Ingrese su email">
+            </div>
+
+            <p class=" message_error email_error {{error_email_not_find}} ">Correo Incorrecto </p>
+
+            <p class=" message_error email_error-input">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+
+        </div>
+
+
+        <div class="form_grup-login" id="grup_password">
+                
+
+            <div class="form_grup_login-input">
+                <label for="password" class="form_login-label">Password</label>
+                <input type="password"  name="password" id="password" placeholder="Ingrese su contraseña">
+                <i class=" grup_icon-password fas fa-eye-slash" style="color: #F96908;"></i>
+            </div>
+            <p class="message_error password_error {{error_password}} ">Contraseña incorrecta</p>
+            <p class="message_error password_error-input">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+        </div>
+
+
+        <div class="form_login-btn">
+
+            <button type="submit">Ingresar</button>
+
+                <p style=" text-align: center; margin-top: 10px;"><a style="color: #F96908;" href="#">¿Olvidaste tu contraseña?</a></p>
+
+
+        </div>
+
+
+    </form>
+
+    
+</div>
+<script src="static/js/validationLogin.js"></script>
+{%endblock%}

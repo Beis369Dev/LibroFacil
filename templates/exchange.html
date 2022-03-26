@@ -1,0 +1,92 @@
+{% extends 'layout.html' %}
+
+{%block body%}
+
+
+<div class="container_exchange">
+
+
+
+    <!-- {%with messages = get_flashed_messages()%}
+      {%if messages%}
+      {% for message in messages%}
+         
+        <div class="messages">
+            <h1>{{message}}</h1>
+        </div>
+
+      {%endfor%}
+      {%endif%}
+
+      {%endwith%} -->
+
+
+    <div class="img_container">
+        <img src="http://127.0.0.1:8000/static/{{Book[9]}}" alt="">
+    </div>
+
+    <div class="infoBook_container" id="{{Book[0]}}">
+
+
+
+        <div class="info">
+            <h1>{{Book[1]}}</h1>
+
+            <ul>
+                <li>Categoria
+                    <ul>
+                        <li>{{Book[3]}}</li>
+                    </ul>
+                </li>
+                <li>Autor
+                    <ul>
+                        <li>{{Book[5]}}</li>
+                    </ul>
+                </li>
+                <li>Estado
+                    <ul>
+                        <li>{{Book[8]}}</li>
+                    </ul>
+                </li>
+            </ul>
+
+            
+        </div>
+
+        <div class="btn_exchange">
+            <button id="request_Exchange">Intercambiar</button>
+        </div>
+
+        <p class="message-susses" id="MessgeSusses"><b> Intercabio solicitado exitosamente! </b><i class="fas fa-check"></i>
+             </p>
+
+             <div class="btn_exchange ">
+                <a href="http://127.0.0.1:8000/">
+                <button class="invisible" id="request_Exchange_OK">Volver</button>
+                </a>
+            </div>
+
+    </div>
+
+    <div class="title3">
+
+        <h5>Ofrecer un libro</h5>
+        <div class="myselection_container">
+
+
+
+        </div>
+
+    </div>
+
+   
+
+
+</div>
+
+
+<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+
+<script src="http://127.0.0.1:8000/static/js/exchange.js"></script>
+
+{%endblock%}
